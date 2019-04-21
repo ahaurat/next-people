@@ -34,13 +34,16 @@ exit
 ```
 
 ## View the database
-Mongo Admin interface at http://localhost:8081. After you've added at least one person you can view the People database collection at http://localhost:8081/db/express-mongo/people
+Mongo Admin interface can be viewed at http://localhost:8081. After you've added at least one person, you can view the People database collection at http://localhost:8081/db/express-mongo/people
 
 ## References and included technologies
 https://github.com/zeit/next.js
+
 https://mochajs.org/
+
 Some inspiration for testing from:
 https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai
+
 This post helped me get the tests working with the NextJS express implementation:
 https://github.com/zeit/next.js/issues/1300#issuecomment-282910431
 

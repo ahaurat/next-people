@@ -1,0 +1,56 @@
+version: "2"
+services:
+  next-app:
+    image: node:10
+    cpu_shares: 100
+    mem_limit: 450000000
+    ports:
+      - "80:80"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: nextapp
+        awslogs-region: us-west-2
+        awslogs-stream-prefix: nextapp
+# version: "3"
+# services:
+#   next-app:
+#     image: node:10
+#     container_name: nextapp
+#     # restart: always
+#     ports:
+#       - "80:80"
+#     # links:
+#       # - mongo
+#     logging:
+#       driver: awslogs
+#       options:
+#         awslogs-group: nextapp
+#         awslogs-region: us-west-2
+#         awslogs-stream-prefix: nextapp
+  # mongo:
+  #   container_name: mongo
+  #   image: mongo
+  #   ports:
+  #     - "27017:27017"
+  #   logging:
+  #     driver: awslogs
+  #     options:
+  #       awslogs-group: mongo
+  #       awslogs-region: us-west-2
+  #       awslogs-stream-prefix: mongo
+  # mongo-admin:
+  #   container_name: mongoadmin
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+  #   logging:
+  #     driver: awslogs
+  #     options:
+  #       awslogs-group: mongoadmin
+  #       awslogs-region: us-west-2
+  #       awslogs-stream-prefix: mongoadmin
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: root
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: example

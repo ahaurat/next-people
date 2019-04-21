@@ -13,7 +13,6 @@ const nextApp = next({ dev })
 const nextHandler = nextApp.getRequestHandler()
 
 // Connect to DB
-// mongoose.connect('mongodb://mongo:27017/express-mongo', {useNewUrlParser: true})
 mongoose.connect(keys.MONGO_URI, {useNewUrlParser: true})
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))

@@ -9,8 +9,7 @@
     "dev:server": "nodemon server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "test": "NODE_ENV=test mocha --timeout 10000",
-    "test2": "nodemon --timeout 10000 --exec \"mocha --recursive\""
+    "test": "NODE_ENV=test mocha --exit"
   },
   "author": "",
   "license": "ISC",
